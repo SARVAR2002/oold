@@ -25,8 +25,6 @@ eg.
 console.log('hello world');'
 
 Add '#nospam' in group description to stop spam commands
-All commands except #spam & #leave work in pm
-Made by: pathetic_geek (https://github.com/patheticGeek)
 `;
 
 const leaveText =
@@ -125,7 +123,7 @@ async function procMess(message) {
         await cl.sendText(message.chatId, leaveText);
         await cl.leaveGroup(message.chat.id);
       } else {
-        await cl.reply(message.chatId, "You're not an admin!", message.id);
+        await cl.reply(message.chatId, "You're not an admin! bhakkk bhosdike", message.id);
       }
     }
   } else if (
