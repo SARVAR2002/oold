@@ -62,7 +62,7 @@ async function procMess(message) {
       ) {
         await cl.sendText(message.chatId, "Spam protected group");
       } else {
-        const text = `hello ${message.chat.groupMetadata.participants.map(
+        const text = `hello bhemchodd ${message.chat.groupMetadata.participants.map(
           (participant) =>
             `\n🌚 @${
               typeof participant.id === "string"
