@@ -10,19 +10,12 @@ const helpOnInGroup = ["#help", "#menu"];
 
 const helpText =
   process.env.HELP_TEXT ||
-  `Commands:
+  `*Commands*
 #sticker: write in caption of a image/video/gif to turn it into sticker
 #spam: tag everyone in a message in a group (only works in a group)
 #join https://chat.whatsapp.com/shdkashdh: joing a group with invite link
 #leave: i hope you dont use this (only works in a group if sent by an admin)
-#help: to recive this same message
-#menu: same as help but some people prefer it
-#run languages: Returns all languages supported
-#run {language}
-{code}: Run some code in some language
-eg.
-'#run node
-console.log('hello world');'
+#help OR #menu: to recive this same message
 
 Add '#nospam' in group description to stop spam commands
 `;
@@ -66,9 +59,9 @@ async function procMess(message) {
       ) {
         await cl.sendText(message.chatId, "Spam protected group");
       } else {
-        const text = `hello ${message.chat.groupMetadata.participants.map(
+        const text = `hello bc ${message.chat.groupMetadata.participants.map(
           (participant) =>
-            `\n🌚 @${
+            `\nhehe NOOB @${
               typeof participant.id === "string"
                 ? participant.id.split("@")[0]
                 : participant.user
